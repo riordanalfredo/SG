@@ -1,0 +1,62 @@
+<html>
+    <head>
+    <title>Kimply</title>
+        <title>Kimply Color Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/material.min.css">
+        <script src="css/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+         
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" sizes="196x196" href="img/kimply.png" />
+        <link rel="apple-touch-icon-precomposed" href="img/kimply.png" />
+    
+        <link rel="stylesheet" href="css/home.css">
+    </head>
+    <body>
+        <div style="float:left;">
+            <button onclick="location.href = 'index.html'" class="mdl-button mdl-js-button mdl-js-ripple-effect "> <i class="material-icons">keyboard_backspace</i> </button>
+        </div>
+        <br>
+        <div align=center style="margin:auto;float:center">  
+            <br>
+            <hr> <h4><b>LEVELS</b></h4>
+            <hr> 
+            <br>
+                <img onclick="location.href = 'levels/easy.html'" src="img/easy.png" width=175px style="float:center;">
+
+                <br>
+                <img onclick="location.href = 'levels/hard.html'" src="img/hard.png" width=175px style="float:center;">
+                <br> <br> 
+            <hr>
+        </div>
+       <footer> Developed by &copy; Alfredo</footer>   
+    </body>
+  
+     <audio id="audio" src="bgmusic/a.mp3" autoplay loop width="2" height="0"> </audio >
+<script>
+    
+var aud = document.getElementById("audio");  
+ var STORAGE_KEY_SONG = "mute";
+
+ var muteJSON = localStorage.getItem(STORAGE_KEY_SONG);
+    if (muteJSON)
+    {
+        var muteCond = JSON.parse(muteJSON);
+        if(muteCond.cond == true){
+            
+            aud.muted = true;
+           
+           
+        }
+                
+    }
+    else
+    {
+        localStorage.setItem(STORAGE_KEY_SONG, JSON.stringify(muteCondition));
+    }    
+    
+</script>
+    
+   </html>

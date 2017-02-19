@@ -1,0 +1,83 @@
+@import url("material-icons.css");
+
+body{
+    font-family: 'Roboto Slab', serif;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+footer{
+    background-color: #0d1f2d;
+    color: white;  
+}
+
+.titlebg{
+    font-family: 'Anton', sans-serif;
+    background-image: url(../img/titlebg.jpg);
+    background-size: 100% auto;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+div.fill-screen {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+img.fit {
+    max-width: 99%;
+    max-height: 99%;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: static ;
+    
+}
+
+h4,h2,h3{
+    color:#d2973b;
+}
+h1{
+    color:#0d1f2d;
+}
+
+.button{
+    width:40%;
+}
+
+p{
+text-align: justify;  
+}
+
+.page{
+    background-color:white;
+    margin: 20 20 20 20;
+    padding: 20 20 20 20;
+    
+
+@media (min-width:1025px){
+.page{
+    margin-left:30%;
+    margin-right:30%;
+}
+}
+
+@media only screen and (min-width:1025px) {
+            .hide-on-desktop, * [aria-labelledby='hide-on-desktop'] {
+                display: none;
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
