@@ -74,7 +74,7 @@
         <img src="img/title.png" width="75%" style="float:center;">
         <br> 
         <hr> <br> 
-        <button onclick="fadeout()" height="200px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button" id="start"> <i class="material-icons md-48">play_arrow</i> </button>
+        <button onclick="goto()" height="200px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button" id="start"> <i class="material-icons md-48">play_arrow</i> </button>
     
         <br> <br> <hr> <br> <br> 
         
@@ -114,17 +114,17 @@
     var audio = document.getElementById("audio")
     audio.volume = 0.5;
     
-        
+    /*    
     function fadeout(){
         
          var newVolume = 0.1;
         
         $("#audio").animate({volume: newVolume}, 700);
-        setTimeout(location,700)
-        function location(){
+        setTimeout(location,700)*/
+        function goto(){
             window.location = "level.html";
         }
-    }    
+  //  }    
         
    
     
