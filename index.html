@@ -148,30 +148,33 @@ function onDeviceReady() {
     set_body_height();
   });
         
+    document.addEventListener("backbutton", ShowExitDialog, false);
+}
 
-var anj = window.location.href;
-var tot = anj + "#section2";
-history.pushState(null, null, location.href); 
-window.onpopstate = function(event) {
+        
+// Dialog box when back button is pressed
 
-    if(anj !== tot){
-        
-           console.log("okey")
-          
-           
-    }else{
-        
-        window.location.href="";
-        history.go(1)
+ function ShowExitDialog() {
+        navigator.notification.confirm(
+                ("Do you want to Exit?"), // message
+                alertexit, // callback
+                'Survival Guide by PPIA Monash', // title
+                'YES,NO' // buttonName
+        );
+
     }
-}
-    
-    document.addEventListener("backbutton", onBackKeyDown, false);
-}
+// Call exit function
 
-function onBackKeyDown() {
-    alert("test");
-}
+ function alertexit(button){
+
+        if(button=="1" || button==1)
+        {   
+            navigator.app.exitApp();//quit the app.
+            device.exitApp();
+        }
+
+}        
+        
 
     </script>
 
