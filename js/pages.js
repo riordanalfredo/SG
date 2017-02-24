@@ -11,3 +11,17 @@ function backKeyDown() {
     
      window.location.href="index.html";
 }
+
+
+history.pushState(null, null, location.href); 
+window.onpopstate = function(event) {
+    
+    if(condition == true){
+        console.log("nothing");
+    }else{
+        window.location.href="../index.html";
+        history.go(1);
+    }
+    
+   
+};

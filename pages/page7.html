@@ -13,6 +13,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
        <link href="https://fonts.googleapis.com/css?family=Anton|Roboto+Slab" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style> .asek{
+                width:31%;
+                }   
+       </style>
 </head>
 <body>
     <!-- Uses a header that scrolls with the text, rather than staying
@@ -50,11 +54,50 @@
       
     <div class="page-content page">
   
-            <h1>Cheap Foods</h1>
-            <p>
-                
-           </p>
-
+            <h2>Cheap Foods</h2>
+            <div class=wrapper>
+                 <a href="#" class="link3"><button class="asek mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                       <i><b>CITY</b></i> 
+                    </button></a>
+                &nbsp; 
+                <a href="#" class="link1"><button class="asek mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                       <i><b>CLAYTON</b></i> 
+                    </button></a>
+                &nbsp; 
+                <a href="#" class="link2"><button class="asek mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                       <i><b>CAULFIELD</b></i> 
+                    </button></a>
+               
+            </div>
+        <br>
+             <div class="div3">
+                 
+                 Under Development! (1)
+             </div>
+        
+            <div class="div1">
+                 Under Development! (2)
+                 
+             </div>
+        
+            <div class="div2">
+                 
+                 Under Development! (3)
+             </div><br>
+ <div class=wrapper>
+                 <a href="#" class="link3"><button class="asek mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                       <i><b>CITY</b></i> 
+                    </button></a>
+                &nbsp; 
+                <a href="#" class="link1"><button class="asek mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                       <i><b>CLAYTON</b></i> 
+                    </button></a>
+                &nbsp; 
+                <a href="#" class="link2"><button class="asek mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                       <i><b>CAULFIELD</b></i> 
+                    </button></a>
+               
+            </div><br>
        <div class=wrapper>
                 <a href="page6.html"><button class="mdl-button mdl-js-button mdl-button--raised">
                     <i class="material-icons">navigate_before</i>
@@ -74,5 +117,38 @@
 </div>
     
 </body>
+    <script>var condition = true;</script>
+<script>
+
+$(function () {
+    $( ".div3").show();
+    
+    $(".div1").hide();
+    
+    $( ".div2").hide();
+    
+    $(".link1, .link2, .link3").bind("click", function () {
+
+      $(".div1, .div2, .div3").hide();        
+        
+      if ($(this).attr("class") == "link1")
+      {
+        $(".div1").show();
+      }
+      else if ($(this).attr("class") == "link2")
+      { 
+        $(".div2").show();
+      }
+      else 
+      {
+         $(".div3").show();      
+      }
+    });
+
+});
+
+
+</script>
+
     <script type="text/javascript" src="../js/pages.js"></script>
 </html>

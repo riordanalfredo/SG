@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body onload="onLoad()">
+<body >
     <!-- Uses a header that scrolls with the text, rather than staying
   locked at the top -->
 <div class="mdl-layout mdl-js-layout">
@@ -103,23 +103,7 @@
 
     <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
 
-    // device APIs are available
-    //
-    function backKeyDown() {
-    // do something
-      window.location.href="index.html";
-        
-    }    
-        
-    function onDeviceReady() {
-        // Now safe to use device APIs
-     document.addEventListener("backbutton", backKeyDown, true);   
          
         
   $(document).ready(function(){
@@ -156,8 +140,20 @@
     set_body_height();
   });
         
-    }
 
+var anj = window.location.href;
+var tot = anj + "#section2";
+history.pushState(null, null, location.href); 
+window.onpopstate = function(event) {
+
+    if(anj !== tot){
+         
+           history.go(1)
+    }else{
+        window.location.href="";
+        history.go(1)
+    }
+}
     </script>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
