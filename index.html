@@ -13,20 +13,26 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Anton|Roboto+Slab" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       
 </head>
 <body >
     <!-- Uses a header that scrolls with the text, rather than staying
   locked at the top -->
-<div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--scroll">
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <span class="mdl-layout-title">PPIA MONASH: SURVIVAL GUIDE</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
     </div>
-  </header>
+      
+    </header>
+    <!--
+     <button style="height:50px;" class="mdl-button mdl-js-button exit" onclick=exit()>
+    <i class="material-icons">exit_to_app</i></button>
+    -->
+    
   <div class="mdl-layout__drawer">
      <span class="mdl-layout-title titlebg"><img src="img/ppia.png" style="float:left;width:50px;margin-right:10px;margin-top:10px;"><br>SURVIVAL GUIDE</span>
     <nav class="mdl-navigation">
@@ -46,10 +52,10 @@
       <a class="mdl-navigation__link" href="pages/page12.html"><hr><i class="material-icons">thumb_up</i> PPIA Monash in a Nutshell</a> 
     </nav>
   </div>
-  <main class="mdl-layout__content">
+    
+  <main class="mdl-layout__content">    
+   
     <div class="page-content">
-        
-
 
     <div class="hide-on-desktop" aria-labelledby="hide-on-desktop" style="mso-hide: all;">
         <img class="center fit" src="img/cover.png">
@@ -99,14 +105,16 @@
 </div>
     
 </body>
-    
-
-    <script type="text/javascript" charset="utf-8">
-
-
-         
+     
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
+    <script type="text/javascript" charset="utf-8">         
         
-  $(document).ready(function(){
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    
+      $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
 
@@ -147,13 +155,24 @@ history.pushState(null, null, location.href);
 window.onpopstate = function(event) {
 
     if(anj !== tot){
-         
-           history.go(1)
+        
+           console.log("okey")
+          
+           
     }else{
+        
         window.location.href="";
         history.go(1)
     }
 }
+    
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+    alert("test");
+}
+
     </script>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>

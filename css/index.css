@@ -79,3 +79,17 @@ h1{
                 overflow: hidden;
             }
         }
+.exit {
+    float:right;
+    margin-left:84%;
+    margin-top:1%;
+    
+}
+
+.demo-layout-transparent {
+  background-image: url("../img/bg.png") center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  color:black;
+}
