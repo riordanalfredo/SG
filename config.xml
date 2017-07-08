@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.survivalguide.ppia"
-        version   = "1.0.1">
+        version   = "1.0.0">
 
     <name>Survival Guide</name>
 
@@ -49,7 +49,6 @@
     <plugin name="cordova-plugin-camera" />
     <plugin name="cordova-plugin-media-capture" />
     <plugin name="cordova-plugin-console" />
-    <plugin name="cordova-plugin-contacts" />
     <plugin name="cordova-plugin-device" />
     <plugin name="cordova-plugin-device-motion" />
     <plugin name="cordova-plugin-device-orientation" />
@@ -60,7 +59,7 @@
     <plugin name="cordova-plugin-globalization" />
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-media" />
-    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-network-information"/>
     <plugin name="cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-vibration" />
 
