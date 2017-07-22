@@ -59,8 +59,48 @@
                As International students, you are eligible to apply for Myki concession card which entitles you to a 50% discounted rate when travelling with public transport.<br>
                To apply, <a href="https://my.monash.edu.au/wes/forms/iusepass/">click here </a><br><br>
 
-• Zone 1+2: travel in all suburbs of the Melbourne metropolitan network on trains, trams and buses. $799.50 due at time of purchase<br><br>
-• Zone 2: travel in the outer suburbs of the Melbourne metropolitan network on trains, buses and some trams. $546.00 due at time of purchase
+            • <b>Zone 1+2:</b> travel in all suburbs of the Melbourne metropolitan network on trains, trams and buses. $799.50 due at time of purchase<br><br>
+            • <b>Zone 2:</b> travel in the outer suburbs of the Melbourne metropolitan network on trains, buses and some trams. $546.00 due at time of purchase
+            <div class="fill-screen">
+        <table border=0 align="center">
+                    <tr> 
+                        <td width="150"><font color="blue">2 Hour </font>   </td>
+                        <td width="150"><font color="blue">Zone 1+2 </font>   </td>
+                        <td width="150"><font color="blue">Zone 2 </font>   </td>
+                    </tr> 
+                    <tr>
+                        <td>Full Fare</td>
+                        <td>$4.10</td>
+                        <td>$2.80</td>
+                    </tr>
+                    <tr>
+                        <td>Concession</td>
+                        <td>$2.05</td>
+                        <td>$1.40</td>
+                    </tr>
+                    <tr><hr></tr>
+                    <tr></tr>
+                
+                    <tr> 
+                        <td width="150"><font color="blue">Daily </font>   </td>
+                        <td width="150"><font color="blue">Zone 1+2 </font>   </td>
+                        <td width="150"><font color="blue">Zone 2 </font>   </td>
+                    </tr> 
+                    <tr>
+                        <td>Full Fare</td>
+                        <td>$8.20</td>
+                        <td>$5.60</td>
+                    </tr>
+                    <tr>
+                        <td>Concession</td>
+                        <td>$4.10</td>
+                        <td>$2.80</td>
+                    </tr>
+                </table>       
+                <hr>
+            </div>
+            
+                
            </p>
         <h4>Free Tram Zone</h4>
         <p>
@@ -69,8 +109,22 @@
 
         </p>
         <div class='fill-screen'>
-                <img class="fit" src="../content/10.jpg">
-            </div><br>
+                <img id="myImg" class="fit" src="../content/10.jpg">
+            </div>
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+        
+        <br>
 
        <div class=wrapper>
                 <a href="page4.html"><button class="mdl-button mdl-js-button mdl-button--raised">
@@ -91,6 +145,34 @@
 </div>
     
 </body>
-    <script>var condition = false;</script>
+    <script>
+        var condition = false;
+    
+        // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.style.zoom = "300%" 
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+} 
+    
+    
+    
+    
+    </script>
 <script type="text/javascript" src="../js/pages.js"></script>    
 </html>
